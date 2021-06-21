@@ -1,0 +1,710 @@
+version: "2.0"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - go ahead
+    - sounds good
+    - okay
+    - yes
+    - ok
+    - sure
+    - yeah
+    - yea
+    - do it
+    - positive
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - fine
+    - good
+- intent: How_you
+  examples: |
+    - How are you
+    - fine thanks, what about you?
+    - What abt you
+    - hw abt u
+    - I am good, how are you?
+    - I am fine, how are you?
+    - How are you doing?
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: smalltalk_agent_funny
+  examples: |
+    - you make me laugh a lot
+    - you are hilarious
+    - you are really funny
+    - you're the funniest bot I've talked to
+    - you make me laugh
+    - you're so funny
+    - you're a very funny bot
+    - you're really funny
+    - how funny you are
+    - you're incredibly funny
+    - you are funny
+    - you're the funniest
+    - you are so funny
+    - you are very funny
+    - that was funny
+
+- intent: smalltalk_agent_good
+  examples: |
+    - you are very helpful
+    - you are the best
+    - you're a true professional
+    - you are good
+    - you work well
+    - you are good at it
+    - you are very good at it
+    - you are a pro
+    - you are a professional
+    - you're awesome
+
+# - intent: smalltalk_confirmation_yes
+#   examples: |
+#     - it's fine
+#     - go ahead
+#     - sounds good
+#     - okay
+#     - yes
+#     - ok
+#     - sure
+#     - yeah
+#     - yea
+#     - do it
+
+
+- intent: smalltalk_agent_there
+  examples: |
+    - are you there
+    - you are there
+    - are you near me
+    - are you here
+    - are you still there
+    - you are here
+    - you still there
+    - are you still here
+
+- intent: smalltalk_appraisal_bad
+  examples: |
+    - pretty bad
+    - not good enough
+    - that was lame
+    - that was terrible
+    - it is bad
+    - that's bad
+    - this is bad
+    - not good
+    - I'm afraid it's bad
+    - no it's bad
+
+- intent: smalltalk_appraisal_thank_you
+  examples: |
+    - thank you
+    - thanks
+    - thanks a lot
+    - well thanks
+    - very good thank you
+    - good thanks
+    - thanks
+    - alright thanks
+    - no thank you that's all
+    - perfect thank you
+    - so nice of you
+    - well thank you
+    - thnx
+    - thanx
+
+- intent: smalltalk_appraisal_well_done
+  examples: |
+    - good job
+    - great job
+    - way to go
+    - well done
+    - nice work
+    - great work
+    - amazing work
+    - bravo
+    - good work
+
+- intent: smalltalk_confirmation_cancel
+  examples: |
+    - cancel
+    - abort
+    - annul
+    - cancel it
+    - cancel request
+    - cancelled
+    - dismiss
+    - dismissed
+    - disregard
+    - disregard that
+    - skip
+    - skip it
+    - cancel everything
+    - cancel all
+    - forget about it
+    - forget
+    - don't do that
+    - stop
+
+- intent: smalltalk_dialog_hold_on
+  examples: |
+    - wait a second
+    - could you wait
+    - wait please
+    - hold on
+    - wait
+    - oh wait
+    - wait hold on
+    - don't rush
+
+- intent: smalltalk_dialog_wrong
+  examples: |
+    - that was wrong
+    - that's not what I asked
+    - that's wrong
+    - wrong
+    - it is not right
+    - that's not right
+    - it's wrong
+    - that is incorrect
+    - incorrect
+    - not correct
+    - you are wrong
+    - not right
+
+- intent: smalltalk_emotions_ha_ha
+  examples: |
+    - huh
+    - lol
+    - xd
+    - ha ha
+    - ahahah
+    - ahah lol
+    - laughing out loud
+    - LMAO
+    - that's funny
+    - ah
+    - ah ah ah
+    - ahah
+    - ahaha
+    - ahahaha
+    - ha
+    - ha ha ha
+    - ha ha ha ha
+    - hah
+    - haha
+    - haha funny
+    - haha haha haha
+    - haha that's funny
+    - haha very funny
+    - hahaha
+    - hahaha funny
+    - hahaha very funny
+    - he
+    - hehe
+    - hehehe
+    - lmao
+    - wow
+
+- intent: smalltalk_greetings_nice_to_meet_you
+  examples: |
+    - nice to meet you
+    - it was nice meeting you
+    - it was very nice to meet you
+    - good to know each other
+    - glad to meet you
+    - nice meeting you
+    - nice to meet you too
+    - pleased to meet you
+    - pleasure to meet you
+    - pleasure to meet you too
+
+- intent: smalltalk_greetings_nice_to_talk_to_you
+  examples: |
+    - it's been so nice to talk to you
+    - it's been a pleasure talking to you
+    - nice to talk to you
+    - it's nice to talk to you
+    - nice talking to you
+    - it is nice talking to you
+    - how nice it is to talk to you
+
+- intent: smalltalk_greetings_whatsup
+  examples: |
+    - what is on your mind
+    - what's happened
+    - what is up
+    - what's up
+    - whazzup
+    - good what's up
+    - I said what's up
+    - then what's up
+    - what's shaking
+    - wassup
+    - what is going on
+    - what is happening
+    - what's cracking
+    - what's cooking
+    - hey what's up
+    - what's up today
+
+- intent: restart
+  examples: |
+    - restart
+    - start again
+    - \start
+    - /start
+    - reset
+    - start
+    - restarted
+
+- intent: smalltalk_user_needs_advice
+  examples: |
+    - what should I do about it
+    - any suggestions
+    - what do you recommend
+    - give me a wise advice
+    - I need advice
+    - any advice
+    - do you have any advice for me
+    - advise me
+    - what should I do
+    - can I ask for your advice
+    - can you advise me
+    - guide me
+    - can you give me advice
+    - can you offer any advice
+    - give me some advice about
+    - give me some good advice
+    - help me with advice
+    - I could use some advice
+    - I need an advice from you
+    - I seek your advice
+    - what can you recommend
+    - what do you suggest
+    - what is your advice
+
+- intent: smalltalk_user_waits
+  examples: |
+    - I'm waiting
+    - still waiting
+    - I'll wait
+    - I can't wait anymore
+    - how long do I have to wait
+
+- intent: smalltalk_user_will_be_back
+  examples: |
+    - I'll get back to you in a moment
+    - be back in 5 minutes
+    - I'll be back
+    - I promise to come back
+    - I'll be back in a few minutes
+
+- intent: buy_a_home
+  examples: |
+    - i want to purchase a [plot](type) in [Thatipur, gwalior](location)
+    - Buy A Home
+    - looking for Residential land / Plot
+    - I want to buy good home
+    - Get a [plot](type)
+    - I want to buy a [Apartment](type)
+    - best [villa](type)
+    - looking for a [plot](type)
+    - I'm looking for a [office](type) in [delhi](location)
+    - can see [office](type) in [chennai](location)
+    - [Tambaram](location)
+    - home
+    - I am looking for [office](type)
+    - [chennai](location)
+    - I'm looking a [office](type)
+    - i want a home
+    - I want a 3bhk in near [Kilpauk](location)
+    - Do you have any 3bhk?
+    - show me property in [Kilpauk](location)
+    - i'm looking for property for [office](type).
+    - 3bhk in [avadi](location)
+    - I am searching for a office spot
+    - I am looking for some [plots](type) in [Delhi](location).
+    - I am looking for some [appartment](type) in [Bangalore](location)
+    - show me [plot](type) in [mumbai](location)
+    - [New Delhi]{"entity": "location", "value": "Delhi"}
+    - show me a [plot](type) place in the centre of [hyderabad] (location)
+    - i am looking for an [office](type) spot in [Coimbatrore](location)
+    - search for house
+    - anywhere in the [west](location)
+    - I am looking for [plot](type) land
+    - I am looking a good in place at [294328](location)
+    - in [Gurgaon](location)
+    - South India [chennai](location)
+    - [NewYork](location)
+    - [London](location)
+    - [Cario](location)
+    - [Mexico](location)
+    - [villa]{"entity": "villa", "value": "type"}
+    - [apartment](type)
+    - [Lithuania](location)
+    - Oh, sorry, in [Italy](location)
+    - in [delhi](location)
+    - I am looking for some restaurants in [Mumbai](location)
+    - I am looking for big [Aparment](type)
+    - What's the average budget for [villa](type) in [Noida] (location){"entity": "Noida", "value": "location"}
+    - What's the average budget for [plot](type) for [Indore](location) {"entity": "Indore", "value": "location"} 
+    - please help me to find a flat in [pune](location)
+    - Please find me a plots in [bangalore](location)
+    - [mumbai](location)
+    - show me good property
+    - please find me [rental flat](type) in [delhi](location)
+    - can you find me a [](location) 3bhk
+    - [delhi](location)
+    - please find me a land in [ahmedabad](location)
+    - please show me a few place for [office](type) in [bangalore](location)
+    - plot
+    - land
+    - apartment
+    - find office
+    - Lesser than Rs. [20L](budget)
+    - Rs. 30L to 70L (budget)
+    - More than 70 crores (premium)
+    - find plot near to me
+    - plots in [pune](location)
+    - Find plot in [bangalore](location)?
+    - [Rishikesh](location)
+    - [ahmedabad](location)
+    - [bangalore](location)
+    - [chennai](location)
+    - [hyderabad](location)
+    - [kolkata](location)
+    - [agra](location)
+    - [ajmer](location)
+    - [aligarh](location)
+    - [allahabad](location)
+    - [amravati](location)
+    - [amritsar](location)
+    - [asansol](location)
+    - [aurangabad](location)
+    - [bareilly](location)
+    - [belgaum](location)
+    - [bhavnagar](location)
+    - [bhiwandi](location)
+    - [bhopal](location)
+    - [bhubaneswar](location)
+    - [bikaner](location)
+    - [bokaro steel city](location)
+    - [chandigarh](location)
+    - [coimbatore](location)
+    - [cuttack](location)
+    - [dehradun](location)
+    - [dhanbad](location)
+    - [durg-bhilai nagar](location)
+    - [durgapur](location)
+    - [erode](location)
+    - [faridabad](location)
+    - [firozabad](location)
+    - [ghaziabad](location)
+    - [gorakhpur](location)
+    - [gulbarga](location)
+    - [guntur](location)
+    - [gurgaon](location)
+    - [guwahati](location)
+    - [gwalior](location)
+    - [hubli-dharwad](location)
+    - [indore](location)
+    - [jabalpur](location)
+    - [jaipur](location)
+    - [jalandhar](location)
+    - [jammu](location)
+    - [jamnagar](location)
+    - [jamshedpur](location)
+    - [jhansi](location)
+    - [jodhpur](location)
+    - [kannur](location)
+    - [kanpur](location)
+    - [kakinada](location)
+    - [kochi](location)
+    - [kottayam](location)
+    - [kolhapur](location)
+    - [kollam](location)
+    - [kota](location)
+    - [kozhikode](location)
+    - [kurnool](location)
+    - [lucknow](location)
+    - [ludhiana](location)
+    - [madurai](location)
+    - [malappuram](location)
+    - [mathura](location)
+    - [goa](location)
+    - [mangalore](location)
+    - [meerut](location)
+    - [moradabad](location)
+    - [mysore](location)
+    - [nagpur](location)
+    - [nanded](location)
+    - [nashik](location)
+    - [nellore](location)
+    - [noida](location)
+    - [palakkad](location)
+    - [patna](location)
+    - [pondicherry](location)
+    - [raipur](location)
+    - [rajkot](location)
+    - [rajahmundry](location)
+    - [ranchi](location)
+    - [rourkela](location)
+    - [salem](location)
+    - [sangli](location)
+    - [siliguri](location)
+    - [solapur](location)
+    - [srinagar](location)
+    - [sultanpur](location)
+    - [surat](location)
+    - [thiruvananthapuram](location)
+    - [thrissur](location)
+    - [tiruchirappalli](location)
+    - [tirunelveli](location)
+    - [tiruppur](location)
+    - [ujjain](location)
+    - [vijayapura](location)
+    - [vadodara](location)
+    - [varanasi](location)
+    - [vasai-virar city](location)
+    - [vijayawada](location)
+    - [visakhapatnam](location)
+    - [warangal](location)
+    - Can you suggest some good [plots](type) in [Rishikesh](location)
+    - Okay. Show me some in [Allahabad](location)
+    - Can you suggest some good [plot](type) in [kolkata](location)
+    - 3bhk apartment. Looking out for some good location in [Bangalore](location)
+    - in [mubaim](location)
+    - [Flat](type) for office in [Mumbai](location)
+    - Looking out for some good [land](type) in [chandigarh](location)
+    - find apartments
+    - [bangalore](location)
+    - [villa]{"entity": "location", "value": "assam"}
+
+
+- synonym: Delhi
+  examples: |
+    - New Delhi
+    - Delhi
+    - NewDelhi
+    - Dilli
+    - Dellhi
+    - newdelhi
+    - Newdelhi
+    - new delhi
+    - new Delhi
+    - Delhi NCR
+- synonym: mid
+  examples: |
+    - moderate
+- synonym: '4'
+  examples: |
+    - four
+- synonym: bangalore
+  examples: |
+    - Bengaluru
+- synonym: vegetarian
+  examples: |
+    - veggie
+    - vegg
+- synonym: Mangalore
+  examples: |
+    - mangalore
+    - mangaluru
+    - Mangaluru
+- synonym: Mysore
+  examples: |
+    - mysore
+    - mysuru
+    - Mysuru
+- synonym: Visakhapatnam
+  examples: |
+    - visakhapatnam
+    - Vizag
+    - vizag
+- synonym: Thiruvananthapuram
+  examples: |
+    - thiruvananthapuram
+    - trivandrum
+    - Trivandrum
+    - Travancore
+- synonym: Allahabad
+  examples: |
+    - prayagraj
+    - Prayagraj
+- synonym: Pondicherry
+  examples: |
+    - pondicherry
+    - puducherry
+    - Puducherry
+- synonym: Nashik
+  examples: |
+    - nashik
+    - Nasik
+    - nasik
+- synonym: Kolkata
+  examples: |
+    - Calcutta
+    - kolkata
+    - kolkatta
+    - calcutta
+    - calcuta
+- synonym: Mumbai
+  examples: |
+    - Bombay
+    - mumbai
+    - bombay
+- synonym: Chennai
+  examples: |
+    - chennai
+    - madras
+    - Madras
+
+# - regex: account_number
+#   examples: |
+#     - \d{5,6}
+    
+# - intent: user_details
+#   examples: |
+#     - my number is [8209829808](number)
+#     - [8209829808](number)
+#     - [8209829808](number) is my number
+#     - my nobile number is [8209829808](number)
+#     - my name is [ashish](name)
+#     - my name is [rahul]{"entity":"name","value":"rahul"}
+#     - my name is [apneet](name)
+#     - [ashish](name) is my name
+#     - [ashish](name) this side
+#     - people call me [ashish]{"entity":"name","value":"ashish"}
+  # ggg:
+  #   - my pincode is [819010](pincode)
+  #   - [474005]{"entity":"pincode"}
+  #   - [685671](pincode)
+  #   - my zip is [123456]{"entity":"pincode"}
+  #   - my pincode is [100078](pincode)
+  #   - [123456](pincode)
+  #   - [543211]{"entity":"pincode"}
+  #   - [293956]{"entity":"pincode"}
+  #   - postcode is [246898]{"entity":"pincode"}
+  #   - my pincode is [1234567891](pincode)
+  #   - This is my pincode [1234567891](pincode)
+
+- intent: Ask_to_do
+  examples: |
+    - What do you have for me?
+    - what can u do for me
+    - what u can do
+    
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+
+
+
+
+
+
+
+
+
+
+- intent: propertydetails
+  examples: |
+    - full view
+    - fullview 
+
+- intent: noaskxyz
+  examples: |
+    - noaskxyz
+
+
+
+
+
+
+
+

@@ -1,0 +1,259 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- smalltalk_agent_funny:
+    use_entities: true
+- smalltalk_agent_there:
+    use_entities: true
+- smalltalk_appraisal_bad:
+    use_entities: true
+- smalltalk_appraisal_thank_you:
+    use_entities: true
+- smalltalk_appraisal_well_done:
+    use_entities: true
+- smalltalk_confirmation_cancel:
+    use_entities: true
+- smalltalk_dialog_hold_on:
+    use_entities: true
+- smalltalk_dialog_wrong:
+    use_entities: true
+- smalltalk_emotions_ha_ha:
+    use_entities: true
+- smalltalk_greetings_nice_to_meet_you:
+    use_entities: true
+- smalltalk_greetings_nice_to_talk_to_you:
+    use_entities: true
+- smalltalk_greetings_whatsup:
+    use_entities: true
+- smalltalk_user_needs_advice:
+    use_entities: true
+- smalltalk_user_tired:
+    use_entities: true
+- smalltalk_user_waits:
+    use_entities: true
+- smalltalk_user_will_be_back:
+    use_entities: true
+- buy_a_home:
+    use_entities: true
+- smalltalk_agent_good:
+    use_entities: true
+- How_you:
+    use_entities: true
+- Ask_to_do:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- propertydetails:
+    use_entities: true
+- restart:
+    use_entities: true
+- noaskxyz:
+    use_entities: true
+entities:
+- location
+slots:
+  location:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+  type:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+  range:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: true
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: false
+    influence_conversation: false
+responses:
+  utter_How_you:
+  - text: Thanks! I'm super? How can I help you?
+  utter_greet:
+  - image: https://bit.ly/3bUSqCx
+    text: Hello! I am property search assistant! How can I help?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: Bye
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: Thanks, Have a nice day!
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: See you!
+  utter_iamabot:
+  - text: I am a bot, powered by Shade6.
+  utter_happy:
+  - text: Great, carry on!
+  utter_reply:
+  - text: How can I help you?
+  utter_smalltalk_agent_funny:
+  - text: Funny in a good way, I hope.
+  - text: Thanks.
+  - text: Glad you think I'm funny.
+  - text: I like it when people laugh.
+  utter_smalltalk_agent_good:
+  - text: I'm glad you think so.
+  - text: Thanks, I try.
+  utter_smalltalk_agent_there:
+  - text: Of course. I'm always here.
+  - text: Right where you left me.
+  utter_smalltalk_appraisal_bad:
+  - text: I'm sorry. Please let me know if I can help in some way.
+  - text: I must be missing some knowledge. I'll have my developer look into this.
+  utter_smalltalk_appraisal_thank_you:
+  - text: Anytime. That's what I'm here for.
+  - text: It's my pleasure to help.
+  utter_smalltalk_appraisal_well_done:
+  - text: My pleasure.
+  - text: Glad I could help.
+  utter_smalltalk_confirmation_cancel:
+  - text: That's forgotten. What next?
+  - text: Okay, cancelled. What next?
+  - text: Cancelled! What would you like to do next?
+  utter_smalltalk_dialog_hold_on:
+  - text: I can wait.
+  - text: I'll be waiting.
+  - text: Okay. I'm here.
+  utter_smalltalk_dialog_wrong:
+  - text: Sorry if I understood you incorrectly.
+  - text: I'm still learning. I may misinterpret things from time to time.
+  - text: Sorry about that. I'm still learning.
+  utter_smalltalk_emotions_ha_ha:
+  - text: Glad I can make you laugh.
+  - text: Glad you think I'm funny.
+  - text: I like it when people laugh.
+  - text: I wish I could laugh out loud, too.
+  - text: Wow indeed!
+  utter_smalltalk_greetings_nice_to_meet_you:
+  - text: It's nice meeting you, too.
+  - text: Likewise. I'm looking forward to helping you out.
+  - text: Nice meeting you, as well.
+  - text: The pleasure is mine.
+  utter_smalltalk_greetings_nice_to_talk_to_you:
+  - text: It sure was. We can chat again anytime.
+  - text: I enjoy talking to you, too.
+  - text: You know I'm here to talk anytime.
+  utter_smalltalk_greetings_whatsup:
+  - text: Not a whole lot. What's going on with you?
+  - text: Not much. What's new with you?
+  - text: Just here, waiting to help someone. What can I do for you?
+  utter_smalltalk_user_needs_advice:
+  - text: I probably won't be able to give you the correct answer right away.
+  - text: I'm not sure I'll have the best answer, but I'll try.
+  utter_smalltalk_user_waits:
+  - text: I appreciate your patience. Hopefully I'll have what you need soon.
+  - text: Thanks for being so patient. Sometimes these things take a little time.
+  utter_smalltalk_user_will_be_back:
+  - text: I'll be waiting.
+  - text: Okay. You know where to find me.
+  - text: All right. I'll be here.
+  utter_ask_location:
+  - text: In which locality/city are you looking for property?
+  utter_ask_type:
+  - buttons:
+    - payload: apartment
+      title: Apartment
+    - payload: plot
+      title: Plot
+    - payload: villa
+      title: Villa
+    - payload: office
+      title: Office
+    text: What property type are you interested in?
+  utter_ask_range:
+  - buttons:
+    - payload: '1'
+      title: 1km
+    - payload: '2'
+      title: 2km
+    - payload: '5'
+      title: 5km
+    text: You want property within range of..
+  utter_restart:
+  - buttons:
+    - payload: /restart
+      title: YES
+    - payload: /restart
+      title: NO
+    text: Want to search different property ??
+  utter_submit:
+  - text: All done! I am doing a property search..
+  utter_Ask_to_do:
+  - text: I can help you to buy a home!
+  utter_out_of_scope:
+  - text: Sorry, I didn't get what you said. Please rephrase what you said.
+  - text: Can you try asking it a different way?
+  - text: I'm not sure I understood. Try asking another way?
+actions:
+- utter_iamabot
+- utter_ask_location
+- utter_smalltalk_agent_funny
+- utter_smalltalk_agent_good
+- utter_smalltalk_agent_there
+- utter_smalltalk_appraisal_bad
+- utter_smalltalk_appraisal_thank_you
+- utter_smalltalk_confirmation_cancel
+- utter_smalltalk_dialog_hold_on
+- utter_smalltalk_dialog_wrong
+- utter_smalltalk_emotions_ha_ha
+- utter_smalltalk_greetings_nice_to_meet_you
+- utter_smalltalk_greetings_nice_to_talk_to_you
+- utter_smalltalk_greetings_whatsup
+- utter_smalltalk_user_needs_advice
+- utter_smalltalk_user_waits
+- utter_smalltalk_user_will_be_back
+- utter_greet
+    channel: Whatsapp
+- utter_goodbye
+- utter_slots_values
+- utter_submit
+- utter_did_that_help
+- utter_askuserdeatils
+- action_response
+- utter_How_you
+- utter_reply
+- action_restart
+- utter_ask_range
+- utter_Yes
+- utter_no
+- action_fullview
+forms:
+  db_form:
+    location:
+    - entity: location
+      type: from_text
+    type:
+    - type: from_text
+    range:
+    - type: from_text
+e2e_actions: []

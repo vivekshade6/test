@@ -1,0 +1,64 @@
+import logging
+import json
+from sanic import Blueprint, response
+from sanic.request import Request
+from typing import Text, Optional, Callable, Awaitable, List, Dict, Any
+from rasa.core.agent import Agent
+from sanic.response import HTTPResponse
+from rasa.core.interpreter import RasaNLUInterpreter
+from rasa.core.channels.channel import UserMessage, OutputChannel
+from rasa.core.channels.channel import InputChannel
+from rasa.core.channels.channel import CollectingOutputChannel
+from rasa.utils.endpoints import EndpointConfig
+from rasa.core.run import configure_app
+
+logger = logging.getLogger(__name__)
+
+
+class Whatsapp(InputChannel):
+    """A custom http input channel.
+    This implementation is the basis for a custom implementation of a chat
+    frontend. You can customize this to send messages to Rasa Core and
+    retrieve responses from the agent."""
+
+    #@classmethod
+    #def name(cls):
+    #    return "Whatsapp"
+
+    def blueprint(self, on_new_message: Callable[[UserMessage], Awaitable[None]]):
+
+        custom_webhook = Blueprint('custom_webhook', __name__)
+
+        @custom_webhook.route("/", methods=["GET"])
+        async def health(request: Request) -> HTTPResponse:
+            return response.json({"status": "ok"})
+
+        @custom_webhook.route("/webhook", methods=["POST"])
+        async def receive(request) -> HTTPResponse:
+            
+		data = json.loads(request)
+            for i in data["messages"]:
+                sender_id = i["from"] # method to get sender_id
+                text = i["text"]["body"] # method to fetch text
+                input_channel = "Whatsapp" # method to fetch input channel
+                metadata = self.get_metadata(request) # method to get metadata
+
+
+
+            collector = CollectingOutputChannel()
+
+            # include exception handling
+
+            await on_new_message(
+                UserMessage(
+                    text,
+                    collector,
+                    sender_id,
+                    input_channel=input_channel,
+                    metadata=metadata,
+                )
+            )
+
+            return response.json(collector.messages)
+
+        return custom_webhook

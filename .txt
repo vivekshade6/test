@@ -1,0 +1,25 @@
+INSERT INTO Customers (propId,customerId,name,description,builderName,price,area,city,state,country,locality,pincode,Lat,Lon,type,category,listingType,furnishing,propType,houseType,propAge)
+VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway'),
+('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+
+propId 	customerId 	name 	description 	builderName 	price 	area 	city 	state 	country 	locality 	pincode 	Lat 	Lon 	type 	category 	listingType 	furnishing 	propType 	houseType 	propAge
+
+
+
+
+
+INSERT INTO `propertyDetails` (`propId`, `customerId`, `name`, `description`, `builderName`, `price`, `area`, `city`, `state`, `country`, `locality`, `pincode`, `Lat`, `Lon`, `type`, `category`, `listingType`, `furnishing`, `propType`, `houseType`, `propAge`) VALUES ('4', '4', 'Casagrand Builder Pvt. Ltd.', 'Perumbakkam is very good place to live with all amenities available nearby. Transport and connectivity, temples, malls, shopping complex all are available nearby.', 'Mahesh', '\r\n₹ 50.0 Lac', '1212 sqft\r\n', 'Chennai', 'Tamil Nadu', 'India', 'Kilpauk', '600010 ', '13.0828', '80.2417', 'res', 'budget', 'sale', 'furnished', 'apt', '2bhk', '0.6 years');

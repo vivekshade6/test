@@ -1,0 +1,356 @@
+version: "2.0"
+
+
+# stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: How_you
+  - action: utter_How_you
+
+# - story: greetpath
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: How_you
+  - action: utter_How_you
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  - intent: How_you
+  - action: utter_How_you
+
+- story: path_smalltalk_agent_funny
+  steps:
+  - intent: smalltalk_agent_funny
+  - action: utter_smalltalk_agent_funny
+
+- story: path_smalltalk_agent_good
+  steps:
+  - intent: smalltalk_agent_good
+  - action: utter_smalltalk_agent_good
+
+
+
+# - story: path_smalltalk_confirmation_yes
+#   steps:
+#   - intent: smalltalk_confirmation_yes
+#   - action: utter_smalltalk_confirmation_yes
+
+
+- story: path_smalltalk_agent_there
+  steps:
+  - intent: smalltalk_agent_there
+  - action: utter_smalltalk_agent_there
+
+- story: path_smalltalk_appraisal_bad
+  steps:
+  - intent: smalltalk_appraisal_bad
+  - action: utter_smalltalk_appraisal_bad
+
+- story: path_smalltalk_appraisal_thank_you
+  steps:
+  - intent: smalltalk_appraisal_thank_you
+  - action: utter_smalltalk_appraisal_thank_you
+
+- story: path_smalltalk_appraisal_well_done
+  steps:
+  - intent: smalltalk_appraisal_well_done
+  - action: utter_smalltalk_appraisal_well_done
+
+
+- story: path_smalltalk_dialog_hold_on
+  steps:
+  - intent: smalltalk_dialog_hold_on
+  - action: utter_smalltalk_dialog_hold_on
+
+- story: path_smalltalk_dialog_wrong
+  steps:
+  - intent: smalltalk_dialog_wrong
+  - action: utter_smalltalk_dialog_wrong
+
+- story: path_smalltalk_emotions_ha_ha
+  steps:
+  - intent: smalltalk_emotions_ha_ha
+  - action: utter_smalltalk_emotions_ha_ha
+
+- story: path_smalltalk_greetings_nice_to_talk_to_you
+  steps:
+  - intent: smalltalk_greetings_nice_to_talk_to_you
+  - action: utter_smalltalk_greetings_nice_to_talk_to_you
+
+- story: path_smalltalk_greetings_whatsup
+  steps:
+  - intent: smalltalk_greetings_whatsup
+  - action: utter_smalltalk_greetings_whatsup
+
+- story: path_smalltalk_user_needs_advice
+  steps:
+  - intent: smalltalk_user_needs_advice
+  - action: utter_smalltalk_user_needs_advice
+
+- story: path_smalltalk_user_waits
+  steps:
+  - intent: smalltalk_user_waits
+  - action: utter_smalltalk_user_waits
+
+- story: path_smalltalk_user_will_be_back
+  steps:
+  - intent: smalltalk_user_will_be_back
+  - action: utter_smalltalk_user_will_be_back
+
+- story: path_goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+  - action: action_restart
+
+- story: path_restart
+  steps:
+  - intent: restart
+  - action: action_restart
+# - story: path_userdetails
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+- story: path_what_can_do
+  steps:
+  - intent: Ask_to_do
+  - action: utter_Ask_to_do
+
+
+# - story: path_what_can_do
+#   steps:
+#     - intent: buy_a_home
+#     - action: action_response
+
+- story: askhowareyou
+  steps:
+    - intent: How_you
+    - action: utter_How_you
+
+# - story: path_deny
+#   steps:
+#   - intent: deny
+#   - action: utter_deny
+
+
+# - story: path_fullview
+#   steps:
+#   - action: action_fullview
+#   - action: action_fullview
+
+# - story: path_propertydetails
+#   steps:
+#   - intent: propertydetails
+#   - action: action_response
+
+# - story: buy_home
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: buy_a_home
+#   - action: buy_form
+#   - action: form{"name":"buy_form"}
+#   - action: form{"name":"null"}
+
+# - story: sell_home
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: sell_your_home
+#   - action: sell_form
+#   - action: form{"name":"sell_form"}
+#   - action: form{"name":"null"}
+
+# - story: buy_a_home
+#   steps:
+#   - intent: buy_a_home
+#   - action: buy_form
+#   - action: form{"name":"buy_form"}
+#   - action: form{"name":"null"}
+
+# - story: sell_your_home
+#   steps:
+#   - intent: sell_your_home
+#   - action: sell_form
+#   - action: form{"name":"sell_form"}
+#   - action: form{"name":"null"}
+
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  # - action: utter_reply
+  # - intent: How_you
+  # - action: utter_How_you
+  - intent: buy_a_home
+  - action: db_form
+  - active_loop: db_form
+  # - slot_was_set:
+  #   - requested_slot: address
+  # - slot_was_set:
+  #   - address: vincent 
+  - slot_was_set:
+    - requested_slot: location
+  - slot_was_set:
+    - location: text
+  - slot_was_set:
+    - requested_slot: range
+  - slot_was_set:
+    - range: text
+  - slot_was_set:
+    - requested_slot: type
+  - slot_was_set:
+    - type: text
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_response
+  # - action: utter_askfullview
+  - action: utter_restart
+  # - intent: smalltalk_appraisal_thank_you
+  # - action: utter_smalltalk_appraisal_thank_you
+  
+
+
+
+# - story: interactive_story_2
+#   steps:
+#   - intent: goodbye
+#   - action: utter_askuserdeatils
+#   - intent: deny
+#   - action: utter_goodbye
+
+# - story: interactive_story_3
+#   steps:
+#   - intent: goodbye
+#   - action: utter_askuserdeatils
+#   - action: utter_no
+#   - intent: deny
+#   - action: utter_goodbye
+  # - action: action_restarted
+  # - action: action_slot_reset
+  # - intent: affirm
+
+
+
+# - story: interactive_story_3
+#   steps:
+#   - intent: goodbye
+#   - action: utter_askuserdeatils
+#   - action: utter_yes
+#   - action: buy_form
+#   - active_loop: buy_form
+  # - intent: deny
+ 
+  # - slot_was_set:
+  #   - requested_slot: address
+  # - slot_was_set:
+  #   - address: vincent 
+  # - slot_was_set:
+  #   - requested_slot: name
+  # - slot_was_set:
+  #   - name: text
+
+  # # - slot{"name": "no"}
+  # # - intent: deny
+  # # - action: utter_goodbye
+  # - slot_was_set:
+  #   - requested_slot: number
+  # - slot_was_set:
+  #   - number: text
+  # # - slot_was_set:
+  # #   - requested_slot: city
+  # # - slot_was_set:
+  # #   - city: vincent-mcvincent 
+  # - slot_was_set:
+  #   - requested_slot: pincode
+  # - slot_was_set:
+  #   - pincode: text
+  
+  # - slot_was_set:
+  #   - requested_slot: null
+  # - active_loop: null
+  # - action: utter_submit
+  # - action: utter_slots_values
+  # # - action: action_insert_db
+  # - action: utter_goodbye
+
+  # - intent: buy_a_home
+  # - action: action_response
+
+# - story: path_home_in_chennai
+#   steps:
+#   - intent: home_in_chennai { "meal": "breakfast"}
+#   - action: buy_form
+#   - action: utter_action_chennai
+
+
+# - story: city bangalore
+#   steps:
+#   # ... other story steps
+#   - intent: buy_a_home
+#     entities:
+#     - place: bangalore
+#   - slot_was_set:
+#     - place: bangalore
+#   - action: action_bangalore
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+<class 'rasa.core.channels.channel.CollectingOutputChannel'>

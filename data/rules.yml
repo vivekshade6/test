@@ -1,0 +1,123 @@
+version: "2.0"
+
+rules:
+
+# - rule: Say goodbye anytime the user says goodbye
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+
+# - rule: Say goodbye anytime the user says goodbye
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye
+#   - action: action_restart
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: click here for full property view
+  steps:
+  - intent: propertydetails
+  - action: action_fullview
+  - action: utter_restart
+
+# - rule: noaskxyz
+#   steps:
+#   - intent: noaskxyz
+#   - action: utter_restart
+
+
+
+
+# - rule: Activate form
+#   steps:
+#   - intent: buy_a_home
+#   - action: user_details_form
+#   - active_loop: user_details_form
+
+# - rule: Submit form
+#   condition:
+#   # Condition that form is active.
+#   - active_loop: user_details_form
+#   steps:
+#   # Form is deactivated
+#   - action: user_details_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   # The actions we want to run when the form is submitted.
+#   - action: action_submit
+#   - action: action_response
+
+- rule: out-of-scope
+  steps:
+  - intent: nlu_fallback
+  - action: utter_out_of_scope
+
+
+- rule: Activate form 1
+  steps:
+  - intent: buy_a_home
+  - action: db_form
+  - active_loop: db_form
+  
+
+- rule: Submit form
+  condition:
+  - active_loop: db_form
+  steps:
+  - action: db_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_response
+  # - action: utter_askfullview
+  - action: utter_restart
+
+
+# - rule: Activate form 1
+#   steps:
+#   - intent: buy_a_home
+#   - action: db_form
+#   - active_loop: db_form
+  
+
+# - rule: Submit form
+#   condition:
+#   - active_loop: db_form
+#   steps:
+#   - action: db_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_response
+  
+
+
+# - rule: buy form
+#   steps:
+#   - intent: goodbye
+#   - intent: smalltalk_appraisal_thank_you
+#   - action: buy_form
+#   - active_loop: buy_form
+  
+
+# - rule: Submit buy form
+#   condition:
+#   - active_loop: buy_form
+#   steps:
+#   - action: buy_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: utter_submit
+#   - action: utter_slots_values
+#   - action: action_insert_db
+  
+
+
+  
